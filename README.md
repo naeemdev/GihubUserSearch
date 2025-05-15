@@ -6,13 +6,21 @@ explore repositories, and followers/following users.
 Key Features Implemented
 
 ✅ Fetches list of GitHub Users
+
 ✅ Search GitHub Users
+
 ✅ Fetches list of Repositories of Selected User
+
 ✅ Fetches User Details
+
 ✅ Fetches list of followers of Selected User
+
 ✅ Fetches list of following of Selected User
+
 ✅ Open in repo in external browser
+
 ✅ Error Handling: Displays appropriate messages for API failures.
+
 ✅ Unit Tests: test cases for Use cases , repo and mapper.
 
 🏗️ Tech Stack
@@ -29,30 +37,30 @@ Key Features Implemented
 
 
 📂 Project Structure
-com.naeemdev.githubuser
-
-│── data
-│   ├── mapper             # Maps API models to domain models
-│   ├── remote             # Network layer (Retrofit API Service)
-│   ├── repositories       # Repository implementations
-│   
-│── di
-│   ├── AppModule.kt       # Provides global dependencies
-│   ├── RepositoryModule   # Provides repository dependencies
-│   
-│── domain
-│   ├── model              # Domain models
-│   ├── repositories       # Repository interfaces
-│   ├── usecases           # Business logic (Use Cases)
-│   └── errors             # Error handling classes
-│
-│── presentation
-│   ├── components         # Reusable UI components
-│   ├── screens            # Screens for user list and repositories
-│
-│── ui.theme               # Theming and styling
-│── MainActivity.kt        # Entry point of the app
-│── MyApp.kt               # Hilt application class
+            com.naeemdev.githubuser
+            
+            │── data
+            │   ├── mapper             # Maps API models to domain models
+            │   ├── remote             # Network layer (Retrofit API Service)
+            │   ├── repositories       # Repository implementations
+            │   
+            │── di
+            │   ├── AppModule.kt       # Provides global dependencies
+            │   ├── RepositoryModule   # Provides repository dependencies
+            │   
+            │── domain
+            │   ├── model              # Domain models
+            │   ├── repositories       # Repository interfaces
+            │   ├── usecases           # Business logic (Use Cases)
+            │   └── errors             # Error handling classes
+            │
+            │── presentation
+            │   ├── components         # Reusable UI components
+            │   ├── screens            # Screens for user list and repositories
+            │
+            │── ui.theme               # Theming and styling
+            │── MainActivity.kt        # Entry point of the app
+            │── MyApp.kt               # Hilt application class
 
 🔗 API Integration
 The app integrates with the GitHub REST API to fetch data:
@@ -102,12 +110,18 @@ Error Handling
 
 
 🚀 How to Run the App
+
 1️⃣ Download the code
+
 2️⃣ Open in Android Studio : Sync Gradle and install dependencies
 Open the project in  **Android Studio Meerkat Feature Drop | 2024.3.2** or newer.
+
 Ensure you have an Android Emulator or a Physical Device connected.
+
 3️⃣ Run the App
-    `./gradlew build && ./gradlew installDebug`
+
+            ./gradlew build && ./gradlew installDebug
+
 
 Or, simply press Run ▶️ in Android Studio.
 
