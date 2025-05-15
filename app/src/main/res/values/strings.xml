@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="error_title">Error</string>
+    <string name="dismiss_button">Dismiss</string>
+    <string name="error_forbidden">Forbidden: You do not have permission to access this resource.</string>
+    <string name="error_unauthorized">Unauthorized: Please check your authentication credentials.</string>
+    <string name="error_internal_server">Internal Server Error: Something went wrong on the server side.</string>
+    <string name="error_unknown">Unknown Error: Please try again later.</string>
+    <string name="error_no_internet">No Internet: Please check your network connection.</string>
+    <string name="search_word_here">Search user here…</string>
+    <string name="user_image">User image</string>
+    <string name="no_data_found">Sorry, user not found with the given input.\nPlease try with another</string>
+    <string name="available_for_hire">Available for hire</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="repositories">Repositories</string>
+    <string name="gists">Gists</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="back">back</string>
+    <string name="star">star</string>
+    <string name="this_feature_is_not_available_yet">This feature is not available yet</string>
+</resources>
