@@ -3,7 +3,6 @@ package com.naeemdev.githubuser.presentation.user.detail.viewmodel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.naeemdev.githubuser.R
 import com.naeemdev.githubuser.domain.ErrorType
 import com.naeemdev.githubuser.domain.Resource
 import com.naeemdev.githubuser.domain.usecase.UserDetailUseCase
@@ -30,10 +29,10 @@ class UserDetailViewModel @Inject constructor(
 ) : ViewModel() {
     private val _uiState = MutableStateFlow<DetailUiState>(DetailUiState())
     val uiState: StateFlow<DetailUiState> = _uiState
-    val userNameFromNav: String? = savedStateHandle["userName"]
+    var userNameFromNav = DetailNavParameters.from(savedStateHandle).userName
 
     init {
-        userNameFromNav?.let {
+        userNameFromNav.let {
             userDetail(userNameFromNav)
         }
     }
