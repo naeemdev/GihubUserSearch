@@ -6,9 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.naeemdev.githubuser.navigation.Screen.UserDetailsScreenRoute
 import com.naeemdev.githubuser.navigation.Screen.UserListScreenRoute
-import com.naeemdev.githubuser.presentation.user.detail.DetailScreen
 import com.naeemdev.githubuser.presentation.user.list.UserListScreen
 
 fun <T : Screen> NavController.navigateSingleTop(screen: T) {
@@ -26,31 +24,13 @@ fun Navigation(
         navController = navController,
         startDestination = UserListScreenRoute,
     ) {
+        navigateToUserDetail(navController)
         composable<UserListScreenRoute> {
             UserListScreen(
                 gotoUserDetailScreen = {  userName ->
-                    navController.navigateSingleTop(
-                        UserDetailsScreenRoute(
-                            userName = userName,
-                        )
+                    navController.navigateToUserDetail(
+                        userName = userName,
                     )
-                },
-            )
-        }
-
-
-        composable<UserDetailsScreenRoute> { backStackEntry ->
-            DetailScreen(
-                gotoUserDetailScreen = {  userName ->
-                    navController.navigateUp()
-                    navController.navigateSingleTop(
-                        UserDetailsScreenRoute(
-                            userName = userName,
-                        )
-                    )
-                },
-                onBackClicked = {
-                    navController.navigateUp()
                 },
             )
         }
